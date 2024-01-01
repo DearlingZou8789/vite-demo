@@ -2,6 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm test
-# npx lint-staged
+npx lint-staged
 # https://juejin.cn/post/6951649464637636622?searchId=20231228162049CBE77C8220DDB769BF3C
 # https://juejin.cn/post/7316820448891666469
