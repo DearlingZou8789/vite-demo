@@ -5,12 +5,14 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/essential',
-    'airbnb-base',
-    'plugin:prettier/recommended' // 添加 prettier 插件
+    'eslint:recommended',
+    'plugin:vue/vue3-essential',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },

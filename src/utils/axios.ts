@@ -8,10 +8,10 @@ const axios = Axios.create({
   timeout: 20000
 })
 
-//前置拦截器(发起请求之前的拦截)
+//  前置拦截器(发起请求之前的拦截)
 axios.interceptors.request.use(
   (response) => {
-    //对config进行处理，比如在headers中添加请求头参数
+    //  对config进行处理，比如在headers中添加请求头参数
     return response
   },
   (error) => {
@@ -19,10 +19,10 @@ axios.interceptors.request.use(
   }
 )
 
-//后置拦截器(获取到响应时的拦截)
+//  后置拦截器(获取到响应时的拦截)
 axios.interceptors.response.use(
   (response) => {
-    //对response和error做处理
+    //  对response和error做处理
     return response
   },
   (error) => {
@@ -32,7 +32,7 @@ axios.interceptors.response.use(
       ElMessage.error(`Code: ${code}, Message: ${msg}`)
       console.error(`[Axios Error]`, error.response)
     } else {
-      ElMessage.eror(error)
+      ElMessage.error(error)
     }
     return Promise.reject(error)
   }

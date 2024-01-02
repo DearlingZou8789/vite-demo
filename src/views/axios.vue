@@ -5,14 +5,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import axios from '../utils/axios'
+
 export default defineComponent({
+  name: 'AxiosView',
   setup() {
     axios
       .get('')
-      .then((res: Object) => {
+      .then((res) => {
         console.log(res)
       })
-      .catch((err: Object) => {
+      .catch((err) => {
         console.error(err)
       })
   }
