@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 18.16.1
 
-      - name: Install
+      - name: Install test
         run: npm install # 安装依赖
 
       - name: Build
